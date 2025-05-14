@@ -1,0 +1,21 @@
+# Git
+.git
+.gitignore
+
+# Python
+.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Environment files (handle secrets carefully, consider Docker secrets or build arguments)
+.env
+
+# OS-specific
+.DS_Store
+Thumbs.db 

@@ -10,6 +10,12 @@ class Settings(BaseSettings):
     SECRET_KEY: str = os.getenv("SECRET_KEY", "your-secret-key")
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+    
+    # Supabase Storage Configuration
+    SUPABASE_URL: str = os.getenv("SUPABASE_URL", "https://your-project-id.supabase.co")
+    SUPABASE_KEY: str = os.getenv("SUPABASE_KEY", "your-supabase-anon-key")
+    SUPABASE_JOURNAL_BUCKET: str = "journal-media"
+    SUPABASE_PROFILE_BUCKET: str = "profile-pics"
 
     class Config:
         env_file = ".env"

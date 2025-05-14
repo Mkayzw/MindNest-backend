@@ -7,3 +7,9 @@ python-dotenv
 python-jose[cryptography]
 passlib[bcrypt]
 python-multipart
+fastapi>=0.95.0
+aiofiles
+sqlalchemy-utils
+pytz
+requests
+aiohttp

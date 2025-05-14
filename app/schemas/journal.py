@@ -1,5 +1,5 @@
 # app/schemas/journal.py
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from datetime import datetime
 from typing import Optional
 
@@ -17,8 +17,7 @@ class Journal(JournalBase):
     created_at: datetime
     updated_at: datetime
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
 
 class JournalRead(Journal):
     pass

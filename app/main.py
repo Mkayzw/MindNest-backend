@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.v1.api import api_router
 from app.database import engine, Base
-from app.models import user, journal # Ensure models are imported so Base knows about them
+from app.models import user, journal, mental_health  # Ensure all models are imported so Base knows about them
 
 # Create all database tables
 # This is suitable for development. For production, consider using Alembic migrations.

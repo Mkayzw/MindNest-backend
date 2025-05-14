@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    # If you want to enable live code reloading during development,
+    # you can mount your application code as a volume.
+    # This means changes in your local './app' directory will be reflected
+    # inside the container without needing to rebuild the image.
+    # To use this effectively, your CMD in the Dockerfile might need
+    # uvicorn's --reload flag.
+    # volumes:
+    #   - ./app:/app/app 
