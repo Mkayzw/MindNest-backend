@@ -13,3 +13,8 @@ sqlalchemy-utils
 pytz
 requests
 aiohttp
+pytest
+pytest-asyncio
+httpx
+pytest-cov
+pytest-mock

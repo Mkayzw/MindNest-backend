@@ -13,7 +13,7 @@ class JournalCreate(JournalBase):
 
 class Journal(JournalBase):
     id: int
-    owner_id: int
+    user_id: int # Changed from owner_id
     created_at: datetime
     updated_at: datetime
 
