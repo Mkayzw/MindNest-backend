@@ -256,7 +256,7 @@ def get_journaling_streak(db: Session, user_id: int) -> Dict[str, Any]:
     journal_dates = db.query(
         func.date(JournalEntry.created_at).label("entry_date")
     ).filter(
-        JournalEntry.owner_id == user_id
+            JournalEntry.user_id == user_id
     ).distinct().order_by(
         func.date(JournalEntry.created_at).desc()
     ).all()
